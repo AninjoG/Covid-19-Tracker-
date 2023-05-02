@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+.hide{
+    display: none;
+}
+.fadeIn{
+    animation: fade 0.5s ease-in-out;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* ---------------------------------------------- */
+/*                      MAIN                      */
+/* ---------------------------------------------- */
+main{
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--bg-content);
+    box-shadow: var(--shadow);
+    padding: 15px;
+    margin-bottom: 30px;
+}
+/* -------- LATEST REPORT -------- */
+.latest-report{
+    
+    align-items: center;
+    width: 80%;
+    color: #0c0c0c;
+    border-radius: 10px;
+    background-color: var(--bg-content);
+    box-shadow: var(--shadow);  
+}
+
+
+
+.country,
+.total-cases,
+.recovered,
+.deaths{
+    height: 100px;
+}
+
+.name{
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+.change-country{
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+/* -------- CHART -------- */
+.chart{
+    width: 900px;
+    height: 700px;
+    min-height: 500px;
+    margin-top: 0px;
+}
+/* -------- SEARCH COUNTRY -------- */
+.search-country{
+    position: relative;
+    top: 10px;
+}
+.search-box{
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 400px;
+    height: 30px;
+
+    background-color: #111;
+
+    z-index: 1;
+}
+.search-box input{
+    width: 360px;
+    height: 25px;
+
+    border: none;
+
+    background-color: transparent;
+    color: #FFF;
+
+    padding-left: 15px;
+
+    font-size: 1.1em;
+}
+.search-box img{
+    width: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.country-list{
+    display: flex;
+
+    position: absolute;
+    top: 30px;
+
+    width: 400px;
+    height: 300px;
+
+    background-color: #111;
+    opacity: 0.9;
+
+    overflow-y: scroll;
+}
+
+.country-list ul{
+    width: 100%;
+}
+
+.country-list ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #FFF;
+}
+.country-list ul li:hover{
+    border-left: 1px solid #FFF;
+}
+/* SCROLL BAR */
+.country-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .country-list::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  /* Handle */
+  .country-list::-webkit-scrollbar-thumb {
+    background: #F1F1F1;
+  }
+  
+  /* Handle on hover */
+  .country-list::-webkit-scrollbar-thumb:hover {
+    background: #FFF;
+  }
+
+
+:root {
+    --bg-body: #fafbfd;
+    --bg-content: #ffffff;
+    --bg-hover: #f4f4f4;
+    --color-txt: black; 
+    --nav-height: 70px;
+    --shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-txt);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    position: relative;
+    background-color: var(--bg-body);
+    color: var(--color-txt);
+    padding-top: calc(var(--nav-height) + 30px);
+    font-size: 16px;
+}
+.nav-wrapper {
+    background-color: var(--bg-content);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0 30px;
+    z-index: 99;
+}
+
+.nav {
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--color-txt);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.logo i {
+    color: red;
+}
+
+
+
+

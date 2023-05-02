@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <div class="nav-wrapper">
+          <div class="container">
+              <div class="nav">
+                  <a href="/index.html" class="logo">
+                      COVID TRACKER
+                  </a>
+                  <a href="index2.html">Check Your Countries
+                    Status
+                  </a>
+              </div>
+          </div>
+      </div>
+    <main>
+      <div class="stats">
+        <div class="latest-report">
+          
+          <div class="country">
+            <div class="name">CHOOSE COUNTRY</div>
+            <div class="change-country">change</div>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search Country..."
+                />
+                <img class="close" src=".close.svg" alt="" />
+              </div>
+              <div class="country-list"></div>
+            </div>
+          </div>
+        </div>
+        <div class="chart">
+          <canvas id="axes_line_chart"></canvas>
+        </div>
+      </div>
+    </main>
+
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+      integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+      crossorigin="anonymous"
+    ></script>
+    <script src="countries.js"></script>
+    <script src="chart2.js"></script>
+  </body>
+</html>
