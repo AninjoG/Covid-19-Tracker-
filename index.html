@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Covid tracker
+    </title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./resources/css/grid.css">
+    <link rel="stylesheet" href="./resources/css/app1.css">
+    <link rel="stylesheet" href="./resources/css/app2.css">
+</head>
+
+<body class="loading">
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="index.html" class="logo">
+                    COVID TRACKER
+                </a>
+                <a href="./Page_2/index2.html">Check Your Countries
+                    Status
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="grid-8 grid-md-12 grid-ss--12">
+                    <div class="row">
+                        <div class="grid-4 grid-md-4 grid-ss--12">
+                            <div class="box box-hover">
+                                <div class="count count-confirmed">
+                                    <div class="count-icon">
+                                        <i class="bx bx-bug"></i>
+                                    </div>
+                                    <div class="count-info">
+                                        <h5 id="confirmed-total">123,456,789</h5>
+                                        <span>confirmed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-4 grid-md-4 grid-ss--12">
+                            <div class="box box-hover">
+                                <div class="count count-recovered">
+                                    <div class="count-icon">
+                                        <i class="bx bx-happy-beaming"></i>
+                                    </div>
+                                    <div class="count-info">
+                                        <h5 id="recovered-total">123,456,789</h5>
+                                        <span>recovered</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-4 grid-md-4 grid-ss--12">
+                            <div class="box box-hover">
+                                <div class="count count-death">
+                                    <div class="count-icon">
+                                        <i class="bx bx-dizzy"></i>
+                                    </div>
+                                    <div class="count-info">
+                                        <h5 id="death-total">123,456,789</h5>
+                                        <span>deaths</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    Around the World
+                                </div>
+                                <div class="box-body">
+                                    <div id="all-time-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid-6 grid-md-6 grid-ss--12">
+                            <div class="box">
+                                <div class="box-header">
+                                    what is covid-19
+                                </div>
+                                <div class="box-body">
+                                    <!--<iframe width="100%" height="315" src="https://www.youtube.com/embed/OZcRD9fV7jo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-6 grid-md-6 grid-ss--12">
+                            <div class="box">
+                                <div class="box-header">
+                                    how to protect yourself
+                                </div>
+                                <div class="box-body">
+                                   <!--<iframe width="100%" height="315" src="https://www.youtube.com/embed/bPITHEiFWLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> --> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-4 grid-md-12 grid-ss--12">
+                    <div class="box">
+                        <div class="box-header">
+                            last 30 days
+                        </div>
+                        <div class="box-body">
+                            <div id="days-chart"></div>
+                        </div>
+                    </div>
+                   
+                    <div class="box">
+                        <div class="box-header">
+                            top countries affected
+                        </div>
+                        <div class="box-body">
+                            <table class="table-countries" id="table-countries">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Country
+                                        </th>
+                                        <th>Confirmed</th>
+                                        <th>Recovered</th>
+                                        <th>Deaths</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                        <td>test</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-8 grid-md-12 grid-ss--12">
+                    <div class="box box-hover">
+                        <h3 hidden id="date"  >Date Time</h3>
+                        <div class="box-header">
+                            Monitor countries current status.
+                        </div>
+                        <form autocomplete="on">
+                            <input type="text" name="srch" id="srch" required
+                            list="countries" placeholder="Enter a name of country" size="100">
+                            <datalist id="countries">
+                            </datalist>
+                            <button>Search</button>
+                        </form>
+                        <div class="row">
+                          <div class="grid-4 grid-md-4 grid-ss--12">                             
+                                 <div class="box confirmed">
+                                    <p>confirmed</p>
+                                    <h3>0</h3>
+                                    <i class="fa fa-long-arrow-up">0</i>
+                                    <p>rate per day</p>
+                                 </div>
+                          </div>
+                          <div class="grid-4 grid-md-4 grid-ss--12">                             
+                                 <div class="box recovered">
+                                    <p>recovered</p>
+                                    <h3>0</h3>
+                                    <i class="fa fa-long-arrow-up">0</i>
+                                    <p>rate per day</p>
+                                 </div>            
+                          </div>
+                          <div class="grid-4 grid-md-4 grid-ss--12 ">                          
+                                 <div class="box deaths">
+                                    <p>deaths</p>
+                                    <h3>0</h3>
+                                    <i class="fa fa-long-arrow-up">0</i>
+                                    <p>rate per day</p>
+                                 </div>                     
+                          </div>     
+                        </div> 
+                    </div>
+                    <div class="grid-9">
+                        <div class="box">
+                            <div class="box-header"> 
+                                <div class="chart">
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+                </div>
+                
+                
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./resources/js/api.js"></script>
+    <script src="./resources/js/chart1.js"></script>
+    <script src="./resources/js/chart2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
